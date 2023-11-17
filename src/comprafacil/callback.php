@@ -24,7 +24,7 @@ if (!$multibanco) {
 }
 
 if ($multibanco["payed"] == 1) {
-    die(Tools::displayError('Pagamento ja efectuado.'));
+    die('Pagamento ja efectuado.');
 }
 
 $compraFacil = new CompraFacil();
