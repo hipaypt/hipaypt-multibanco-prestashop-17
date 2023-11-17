@@ -2,6 +2,13 @@
 include(dirname(__FILE__).'/../../config/config.inc.php');
 include(dirname(__FILE__).'/comprafacil.php');
 
+global $kernel;
+if(!$kernel){ 
+  require_once _PS_ROOT_DIR_.'/app/AppKernel.php';
+  $kernel = new \AppKernel('prod', false);
+  $kernel->boot(); 
+}
+
 $id_order = (int)stripslashes($_GET["id_order"]);
 
 if (!$id_order) {
